@@ -1,6 +1,6 @@
 import "./App.css";
-import Loginform from "./components/Loginform";
-import Home from "./components/home";
+import Loginform from "./Loginform";
+import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
