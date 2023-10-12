@@ -10,7 +10,9 @@ function Home() {
 
           <div className="home-header-btn">
             <button className="language">English</button>
-            <button className="signin">Sign In</button>
+            <Link to="login">
+              <button className="signin">Sign In</button>{" "}
+            </Link>
           </div>
         </div>
         <section className="header-content">
@@ -24,7 +26,7 @@ function Home() {
         <section className="login">
           <div className="input-group">
             <input type="text" className="input" />
-            <label className="placeholder">Email address</label>
+            <label className="placeholder">Email address *</label>
           </div>
           <Link to="login">
             {" "}

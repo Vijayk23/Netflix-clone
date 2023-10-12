@@ -16,25 +16,33 @@ function Loginform() {
         <div className="loginform-card">
           <form>
             <h2>Sign In</h2>
-            <input type="email" required />
-            <br></br>
-            <input type="password" required />
-            <br></br>
-            <button className="signin" type="submit">
+            <div className="logininput">
+              <input type="email" required className="email-input" />
+              <label className="placeholder-login">
+                Email address or Phone Number *
+              </label>
               <br></br>
+              <input type="password" required className="email-input" />
+              <label className="placeholder-password">Password *</label>
+            </div>
+            <br></br>
+            <button className="submit-input" type="submit">
               Sign in
             </button>
             <br></br>
-            <div>
-              <input type="checkbox" />
-              <label>Remember me</label>
+            <div className="rem-help">
+              <section>
+                <input type="checkbox" /> <label>Remember me</label>
+              </section>
               <p>Need help?</p>
             </div>
           </form>
-          <p>New to OTT? Sign up now.</p>
-          <p>
+          <p className="signup">
+            New to OTT? <a href="/">Sign up now.</a>
+          </p>
+          <p className="pagepro">
             This page is protected by Google reCAPTCHA to ensure you're not a
-            bot. Learn more.
+            bot. <a href="/">Learn more.</a>
           </p>
         </div>
         <div className="login-footer">

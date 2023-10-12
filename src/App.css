@@ -60,6 +60,7 @@ background: transparent;
   border-radius: 6px;
   color: white;
   border: none;
+  cursor: pointer;
 
 
 }
@@ -104,16 +105,17 @@ margin-bottom: 10em;
 }
 .placeholder{
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 8px;
-  padding: 10px;
+  padding: 0 10px; 
   transition: 0.3s;
   pointer-events: none;
+  font-size: 10px;
 }
 .input:focus + .placeholder
 {
-  top:-3px;
-  font-size: 12px;
+  top:-20px;
+  font-size: 15px;
 
 }
 .getstarted{
@@ -125,6 +127,7 @@ margin-bottom: 10em;
   border-radius: 8px;
   color: white;
   border: none;
+  cursor: pointer;
 }
 .home2{
   background-color: black;
@@ -327,18 +330,22 @@ margin-bottom: 10em;
   background-image: url("/public/images/ott-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  filter: brightness(80%)
   
 }
 .loginform .signin{
   width: 150px;
 }
 .loginform-card{
-  margin: 20vh auto;
-  width: 600px;
+  margin: 10vh auto;
+  width: 350px;
   height: 600px;
   background-color: black;
   padding: 60px;
   text-align: start;
+  opacity: 0.9;
+  border-radius: 10px;
+
 }
 .loginform , .login-footer{
   background-color: #000000;
@@ -348,4 +355,77 @@ margin-bottom: 10em;
   padding: 35px;
   opacity: 0.8;
   margin-bottom: 0px;
+}
+.loginform-card h2{
+  padding: 20px;
+  font-size: 30px;
+}
+.email-input, .submit-input{
+    width: 90%;
+    height: 25px;
+    background-color: #333333;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    margin: 20px 20px 5px 15px;
+    padding: 15px;
+
+
+  }
+  .submit-input{
+    width: 97%;
+    height: 50px;
+    background-color: #AC0912;
+   }
+  .rem-help{
+      display: flex;
+      justify-content: space-around;
+      gap: 100px;
+      font-size: 13px;
+      margin-top: 15px;
+     }
+     .signup{
+      margin: 60px 0 30px 20px;
+     }
+     .signup a, .pagepro a{
+      color: blue;
+      text-decoration: none;
+     }
+   .pagepro{
+    margin:   0px 0 0px 20px;
+    font-size: 13px;
+
+   }
+   .logininput{
+    position: relative;
+   }
+   .placeholder-login{
+    position: absolute;
+    top:27px;
+    left: 10px;
+    padding: 0 15px; 
+     transition: 0.3s;
+    pointer-events: none;
+    font-size: 10px;
+   }
+ .email-input:focus + .placeholder-login
+{
+  top:-3px;
+font-size: 10px;
+
+}
+.placeholder-password{
+  position: absolute;
+  top:125px;
+  left: 10px;
+  padding: 0 15px; 
+   transition: 0.3s;
+  pointer-events: none;
+  font-size: 10px;
+ }
+.email-input:focus + .placeholder-password
+{
+top:100px;
+font-size: 10px;
+
 }
