@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 function Home2() {
   const Quesans = [
@@ -57,7 +58,9 @@ function Home2() {
             <input type="text" className="input" />
             <label className="placeholder">Email address</label>
           </div>
-          <button className="getstarted">Get Started ›</button>
+          <Link to="login">
+            <button className="getstarted">Get Started ›</button>{" "}
+          </Link>
         </section>
       </div>
       <hr></hr>

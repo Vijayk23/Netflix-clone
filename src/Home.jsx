@@ -6,7 +6,9 @@ function Home() {
     <>
       <header className="header">
         <div className="home-header">
-          <img className="logo" src="./images/OTT.png" alt="OTT-logo" />
+          <Link to="login">
+            <img className="logo" src="./images/OTT.png" alt="OTT-logo" />{" "}
+          </Link>
 
           <div className="home-header-btn">
             <button className="language">English</button>
