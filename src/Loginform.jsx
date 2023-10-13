@@ -26,7 +26,7 @@ function Loginform() {
               <label className="placeholder-password">Password *</label>
             </div>
             <br></br>
-            <Link to="Watching">
+            <Link to="/Watching">
               <button className="submit-input" type="submit">
                 Sign in
               </button>
