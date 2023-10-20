@@ -555,3 +555,17 @@ color: rgb(235, 235, 235);
   border: 1px solid white;
   color: white;
 }
+.nextcolor{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.nextcolor button{
+  height: 30px;
+  width: 80px;
+  font-size: 8px;
+  background-color: transparent;
+  border: 1px solid gray;
+  cursor: pointer;
+}

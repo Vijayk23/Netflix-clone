@@ -1,12 +1,11 @@
 import { useState } from "react";
-import Whowatch from "./Whowatch";
+
 import { useNavigate } from "react-router-dom";
 
 export const users = JSON.parse(localStorage.getItem("users")) || [
   {
     id: 1,
     profileimg: "./images/user1.png",
-    username: "Ramya",
   },
   {
     id: 2,
@@ -28,7 +27,7 @@ export const users = JSON.parse(localStorage.getItem("users")) || [
 
 export function Addusers() {
   const [newUsername, setNewUsername] = useState("");
-  const [imageIndex, setImageIndex] = useState(1);
+  const [imageIndex, setImageIndex] = useState(0);
 
   const handleUsernameChange = (e) => {
     setNewUsername(e.target.value);
@@ -45,7 +44,7 @@ export function Addusers() {
 
     localStorage.setItem("users", JSON.stringify(users));
 
-    setImageIndex((prevIndex) => prevIndex + 1);
+    setImageIndex((prevIndex) => (prevIndex + 1) % users.length);
     setNewUsername("");
   };
 
@@ -58,7 +57,16 @@ export function Addusers() {
         <p>Add a profile for another person watching Netflix. </p>
         <hr></hr>
         <div className="img-input">
-          <img src={users[imageIndex].profileimg} alt="profileimage" />
+          <div className="nextcolor">
+            <img src={users[imageIndex].profileimg} alt="profileimage" />
+            <button
+              onClick={() =>
+                setImageIndex((prevIndex) => (prevIndex + 1) % users.length)
+              }
+            >
+              Change color
+            </button>
+          </div>
           <input
             type="text"
             placeholder="Name"
@@ -83,7 +91,6 @@ export function Addusers() {
           </button>
         </div>
       </div>
-      <Whowatch />
     </>
   );
 }
